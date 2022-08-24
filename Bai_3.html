@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str1="khong co dau";
+  let str2="khong"
+  function checkStr1vsStr2(str1,str2){
+    let check=false;
+    for(let i=0;i<str2.length;i++){
+        for(let j=0;j<str1.length;j++){
+            if(str2[i]==str1[j]){
+                check=true;
+                break;
+            }
+        }
+    }
+    return check
+  }
+  let kq=checkStr1vsStr2(str1,str2);
+  alert(kq)
+</script>
+</body>
+</html>

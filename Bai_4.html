@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="700" height="700" style="border: 1px black">
+
+</canvas>
+</body>
+</html>
+<script>
+    class Rectangle{
+        x;
+        y;
+        width;
+        height;
+        color;
+
+        constructor(x,y,w,h,c) {
+            this.x=x;
+            this.y=y;
+            this.w=w;
+            this.h=h;
+            this.c=c
+        }
+        render(canvas){
+            let ctx=canvas.getContext("2d");
+            ctx.fillStyle=this.c;
+            ctx.fillRect(this.x,this.y,this.w,this.h,this.c);
+        }
+    }
+    let canvas=document.getElementById("canvas")
+    let h1= new Rectangle(10,10,200,100,"#000000");
+    h1.render(canvas)
+
+</script>
